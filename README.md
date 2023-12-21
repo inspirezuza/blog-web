@@ -35,4 +35,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-use original fetch instead of axios cause reddit said it better lol
+use original fetch instead of axios cause no need to install and reddit said it better
