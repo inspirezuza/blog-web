@@ -4,7 +4,7 @@
 
 เนื่องจากคนในทีมมีความกังวลเรื่องเว็บแอปอาจเป็นตัวส่งผลให้เกิดปัญหาด้านศีลธรรม นี้เป็นเพียงแค่ demo เท่านั้น จึงเก็บไว้เป็นหนึ่งในไอเดียสำหรับโปรเจค valentine ของ KUTech ต่อไป
 
-[Demo kuluv.vercel.app](kuluv.vercel.app)
+![kuluv.vercel.app](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 ## โปรเจคที่เราจะทำ
 
