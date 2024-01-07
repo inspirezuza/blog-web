@@ -52,8 +52,8 @@ export default async function Page({ params }: { params: { id: number } }) {
               <Image
                 height={400}
                 width={400}
-                src={`${process.env.STRAPI_BASE_URL}${blog.attributes.thumbnail.data.attributes.url}`}
-                alt={blog.attributes.thumbnail.data.attributes.name}
+                src={`${process.env.STRAPI_BASE_URL}${blog.attributes.thumbnail.data[0].attributes.url}`}
+                alt={blog.attributes.thumbnail.data[0].attributes.name}
               />
             </div>
             <div>{blog.attributes.description}</div>

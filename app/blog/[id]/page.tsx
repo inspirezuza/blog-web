@@ -13,7 +13,7 @@ const fetchBlogs = async (id: number) => {
     const response = await fetch(
       `${process.env.STRAPI_BASE_URL}/api/blogs/${id}?populate=thumbnail,author`,
       {
-        next: { revalidate: 300 }, // 5 minute revalidate
+        next: { revalidate: 1 }, // 5 minute revalidate
       }
     );
     if (!response.ok) {
@@ -29,7 +29,7 @@ const fetchBlogs = async (id: number) => {
 
 export default async function Page({ params }: { params: { id: number } }) {
   const blog = await fetchBlogs(params.id);
-  console.log(blog.attributes.thumbnail.data.attributes.width);
+  console.log(blog.attributes.thumbnail.data[0].attributes.width);
   return (
     <>
       <div className="bg-slate-400 h-screen w-full">
@@ -46,8 +46,8 @@ export default async function Page({ params }: { params: { id: number } }) {
               <Image
                 height={400}
                 width={400}
-                src={`${process.env.STRAPI_BASE_URL}${blog.attributes.thumbnail.data.attributes.url}`}
-                alt={blog.attributes.thumbnail.data.attributes.name}
+                src={`${process.env.STRAPI_BASE_URL}${blog.attributes.thumbnail.data[0].attributes.url}`}
+                alt={blog.attributes.thumbnail.data[0].attributes.name}
               />
             </div>
             <div>{blog.attributes.description}</div>

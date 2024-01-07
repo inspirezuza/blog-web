@@ -11,7 +11,7 @@ interface Blog {
 const fetchBlogs = async () => {
   try {
     const response = await fetch(`${process.env.STRAPI_BASE_URL}/api/blogs`, {
-      next: { revalidate: 300 }, // 5 minute revalidate
+      next: { revalidate: 1 }, // 5 minute revalidate
     });
     if (!response.ok) {
       throw new Error("Something went wrong");

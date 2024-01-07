@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: process.env.STRAPI_BASE_URL,
+        hostname: "process.env.STRAPI_BASE_URL",
         port: "",
         pathname: "/**",
       },
