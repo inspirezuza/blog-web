@@ -1,38 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Terminated (Archived)
 
-## Getting Started
+### โปรเจคโดนยกเลิกแล้ว เนื่องจากยังไม่มีความพร้อมมากพอ นี้เป็นเพียงแค่ demo เท่านั้น แต่ขอเก็บไว้เป็นหนึ่งในไอเดียสำหรับโปรเจค valentine ของ KUTech ต่อไป
 
-First, run the development server:
+## โปรเจคที่เราจะทำ
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- KU luv (ชื่อโปรเจคตอนแรก ยังไม่แน่นอน)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**แผนการปล่อยโปรเจคคร่าว ๆ**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- เริ่มโปรโมทคร่าวๆ ครั้งแรกวันที่ 29 ม.ค.
+- เปิดลงทะเบียนล่วงหน้าเพียงรับโค้ดเอาของเพิ่มเติมวันที่ 1 ก.พ.
+- เปิดให้เข้าใช้งานครั้งแรก 12 ก.พ.
+- ปิดระบบวันที่ 29 ก.พ. พร้อมทั้งลบข้อมูลส่วนบุคคลของ users ทิ้ง
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Feature หลัก**
 
-## Learn More
+- ระบบส่วนใหญ่เหมือนกับ tinder
+- มีระบบ login รับเฉพาะ @ku.th เท่านั้น
+- มีหน้าโปรไฟล์ของนิสิตที่เข้าใช้ ใส่เพศ ภาพ ชื่อ คณะ ชั้นปี ความสนใจต่างๆ บลาๆ
+- มีระบบ matching มีปุ่มกดหัวใจ กดไม่ชอบ หากทั้งสองฝ่ายกดใจถือว่าทั้งสองฝ่าย Match สำเร็จ
+- มีระบบ Chat หลังจากที่ match กันแล้ว
+- สามารถ block และ report ได้
 
-To learn more about Next.js, take a look at the following resources:
+**Optional เสริม (ถ้าทำทันอาจจะมี)**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- มีระบบ Super like ใช้กับตอน match โดยการกด superlike จะทำให้ผู้ที่โดนกด super like ทราบว่าโดนกดจากใครและขึ้นมาเป็นคนแรกในหน้า matching
+- Recommendation system ใช้กับระบบ matching เพื่อเพิ่มประสิทธิภาพในการแนะนำให้กับผู้ใช้งาน
+- ระบบยศ Gold **(อาจมีการเก็บเงินเพิ่มเติม ประมาณ 20 บาท)** โดยผู้ที่มียศ Gold จะได้รับสิทธิพิเศษดังนี้
+- สามารถดูได้ว่าใครกดใจเราบ้าง
+- สามารถกด undo ได้ ในกรณีที่ปัดคน
+- สามารถกดใจต่อวันได้เพิ่ม
+- สามารถคุยแชทได้มากขึ้น (ยังไม่แน่ใจว่าต้อง limit หรือไม่ ขึ้นอยู่กับพื้นที่เก็บข้อมูลว่าเก็บ chat log ได้มากพอหรือไม่)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-use original fetch instead of axios cause no need to install and reddit said it better
+- Frontend: Nextjs, Nextui(tailwindcss)
+- Backend: Strapi(Sqlite) host by onrender free plan
