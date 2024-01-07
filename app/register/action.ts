@@ -6,15 +6,20 @@ import { cookies } from "next/headers";
 export async function login(prevState: any, formData: any) {
   console.log("asdf");
   try {
+    const name = formData.get("name");
     const email = formData.get("email");
     const password = formData.get("password");
+    const passwordconfirm = formData.get("passwordconfirm");
+    if (password != passwordconfirm) {
+      throw new Error("Passwords do not match");
+    }
 
     const response = await fetch(
-      `${process.env.STRAPI_BASE_URL}/api/auth/local`,
+      `${process.env.STRAPI_BASE_URL}/api/auth/local/register`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ identifier: email, password }),
+        body: JSON.stringify({ username: name, email, password }),
       }
     );
 
@@ -32,5 +37,5 @@ export async function login(prevState: any, formData: any) {
     console.log(error.message);
     return { message: error.message || "Login Failed" };
   }
-  redirect("/auth/main-page");
+  redirect("/login");
 }

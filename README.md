@@ -1,6 +1,8 @@
 # Terminated (Archived)
 
-### โปรเจคโดนยกเลิกแล้ว เนื่องจากยังไม่มีความพร้อมมากพอ นี้เป็นเพียงแค่ demo เท่านั้น แต่ขอเก็บไว้เป็นหนึ่งในไอเดียสำหรับโปรเจค valentine ของ KUTech ต่อไป
+### โปรเจคโดนยกเลิกแล้ว 1/8/2024
+
+เนื่องจากคนในทีมมีความกังวลเรื่องเว็บแอปอาจเป็นตัวส่งผลให้เกิดปัญหาด้านศีลธรรม นี้เป็นเพียงแค่ demo เท่านั้น จึงเก็บไว้เป็นหนึ่งในไอเดียสำหรับโปรเจค valentine ของ KUTech ต่อไป
 
 ## โปรเจคที่เราจะทำ
 
@@ -35,4 +37,4 @@
 ## Tech Stack
 
 - Frontend: Nextjs, Nextui(tailwindcss)
-- Backend: Strapi(Sqlite) host by onrender free plan
+- Backend: Strapi(Sqlite) host by onRender free plan

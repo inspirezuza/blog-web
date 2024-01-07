@@ -19,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <div className="bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-rose-400 to-pink-500">
+          <Providers>{children}</Providers>
+        </div>
       </body>
     </html>
   );

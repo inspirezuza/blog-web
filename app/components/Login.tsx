@@ -47,6 +47,37 @@ export function LoginPassword(props: any) {
   );
 }
 
+export function LoginPasswordConfirm(props: any) {
+  const [isVisible, setIsVisible] = React.useState(false);
+
+  const toggleVisibility = () => setIsVisible(!isVisible);
+
+  return (
+    <Input
+      name="passwordconfirm"
+      id=""
+      label="Confirm password"
+      variant="bordered"
+      placeholder="Enter your password again"
+      endContent={
+        <button
+          className="focus:outline-none"
+          type="button"
+          onClick={toggleVisibility}
+        >
+          {isVisible ? (
+            <FaRegEye className="text-2xl text-default-400 pointer-events-none" />
+          ) : (
+            <FaRegEyeSlash className="text-2xl text-default-400 pointer-events-none" />
+          )}
+        </button>
+      }
+      type={isVisible ? "text" : "password"}
+      className="max-w-xs"
+    />
+  );
+}
+
 export function LoginEmail() {
   return (
     <Input
@@ -56,6 +87,20 @@ export function LoginEmail() {
       variant="bordered"
       placeholder="Enter your email"
       type="email"
+      className="max-w-xs"
+    />
+  );
+}
+
+export function LoginName() {
+  return (
+    <Input
+      name="name"
+      id=""
+      label="Name"
+      variant="bordered"
+      placeholder="Enter your name"
+      type="text"
       className="max-w-xs"
     />
   );
